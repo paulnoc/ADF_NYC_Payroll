@@ -1,0 +1,32 @@
+{
+	"name": "ds_gen2_AgencyMaster",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_gen2_nycp",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "AgencyMaster.csv",
+				"folderPath": "dirpayrollfiles",
+				"fileSystem": "adlsnycpayrollpaulojukwu"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"type": "String"
+			},
+			{
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
